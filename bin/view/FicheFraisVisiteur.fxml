@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="752.0" style="-fx-background-color: #711307;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FicheFraisVisiteurController">
+   <children>
+      <TableView fx:id="TBFicheFrais" layoutX="31.0" layoutY="162.0" onSort="#initialize" opacity="0.85" prefHeight="86.0" prefWidth="599.0" style="-fx-background-color: #dc0909;">
+        <columns>
+          <TableColumn fx:id="IdVisiteur" prefWidth="75.0" text="IdVisiteur" />
+          <TableColumn fx:id="Mois" prefWidth="85.5999755859375" text="Mois" />
+            <TableColumn fx:id="IdFraisForfait" prefWidth="130.4000244140625" text="IdFraisForfait" />
+            <TableColumn fx:id="Montant" prefWidth="146.39996337890625" text="Montant" />
+            <TableColumn fx:id="Quantité" prefWidth="160.800048828125" text="Quantité" />
+        </columns>
+      </TableView>
+      <Button fx:id="Rtr" layoutX="14.0" layoutY="458.0" mnemonicParsing="false" onAction="#Retour" style="-fx-background-color: #ffbc5e;" text="Retour" />
+      <Button fx:id="Dcx" layoutX="652.0" layoutY="14.0" mnemonicParsing="false" onAction="#Deconnexion" style="-fx-background-color: #ff5d5d;" text="Déconnexion" />
+      <Label layoutX="231.0" layoutY="14.0" prefHeight="68.0" prefWidth="200.0" text="Fiche De Frais" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="Rtr1" layoutX="657.0" layoutY="119.0" mnemonicParsing="false" onAction="#ValiderFF" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: green;" text="Valider" textFill="#17db09">
+         <effect>
+            <Blend mode="GREEN" />
+         </effect>
+      </Button>
+      <TableView fx:id="TBJustificatifs" layoutX="31.0" layoutY="300.0" onSort="#initialize" prefHeight="141.0" prefWidth="599.0" style="-fx-background-color: #dc0909;">
+         <columns>
+            <TableColumn fx:id="Justificatifs" prefWidth="364.79998779296875" text="Justificatifs" />
+            <TableColumn fx:id="MontantJust" prefWidth="122.4000244140625" text="Montant" />
+            <TableColumn fx:id="AfficherJu1" prefWidth="109.5999755859375" text="AfficherJustificatifs" />
+         </columns>
+      </TableView>
+      <Button fx:id="ActualiserFF" layoutX="31.0" layoutY="131.0" mnemonicParsing="false" style="-fx-background-color: #2dabf9;" text="Actualiser" />
+      <Button fx:id="ActualiserJ" layoutX="31.0" layoutY="268.0" mnemonicParsing="false" style="-fx-background-color: #2dabf9;" text="Actualiser" />
+      <Label fx:id="idV" layoutX="51.0" layoutY="74.0" text="Label" textFill="WHITE" />
+      <Label fx:id="nomV" layoutX="154.0" layoutY="74.0" text="Label" textFill="WHITE" />
+      <Label fx:id="prenomV" layoutX="254.0" layoutY="73.0" text="Label" textFill="WHITE" />
+   </children>
+</AnchorPane>
