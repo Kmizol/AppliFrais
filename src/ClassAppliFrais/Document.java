@@ -26,7 +26,7 @@ public class Document {
 	private StringProperty NomJustificatif;
 	private FloatProperty MontantJustificatif;
 
-	public Document(FraisForfait idFraisForfait,Visiteur idVisiteur) {
+	public Document(Visiteur idVisiteur) {
 		
 		this.idJustificatif = new SimpleIntegerProperty();
 		this.idFraisForfait = idFraisForfait ;

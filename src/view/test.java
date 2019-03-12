@@ -23,9 +23,10 @@ public class test {
 	/*LigneFraisForfaitDAO b = new LigneFraisForfaitDAO();
 	ObservableList<Lignefraisforfait> OUI = b.findall();*/
 	
-		DocumentDAO y = new DocumentDAO();
-	ObservableList<Document> listeDoc= (new DocumentDAO()).findall();
-	System.out.println(listeDoc.get(0));
+		
+	LigneFraisForfaitDAO l = new LigneFraisForfaitDAO();
+	ObservableList<Lignefraisforfait> liste  = l.findById("a131");
+	System.out.println(liste.get(0).getQuantite());
 		
 		//VisiteurDAO v = new VisiteurDAO();
 	//<Visiteur> idVisiteur = v.findById("a131");

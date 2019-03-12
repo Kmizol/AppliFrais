@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import ClassAppliFrais.Document;
-import ClassAppliFrais.FraisForfait;
+
 import ClassAppliFrais.Visiteur;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,9 +24,8 @@ public class DocumentDAO {
 		int idJustificatif; 
 		String idVisiteur;
 		String path;
-		String idFraisForfait;
-		String NomJustificatif;
-		float MontantJustificatif;
+		
+		
 		
 		
 		ResultSet table = pst.executeQuery();
@@ -35,26 +34,22 @@ public class DocumentDAO {
 			idJustificatif = table.getInt("idJustificatif");
 			idVisiteur= table.getString("idVisiteur");
 			path = table.getString("path");
-			idFraisForfait= table.getString("idFraisForfait");
-			NomJustificatif = table.getString("NomJustificatif");
-			MontantJustificatif = table.getFloat("MontantJustificatif");
+		
+			
 			
 			VisiteurDAO vd = new VisiteurDAO() ;
 			Visiteur v = vd.findById(idVisiteur);
-			FraisForfaitDAO ffd = new FraisForfaitDAO();
-			FraisForfait ff = ffd.findById(idFraisForfait);
 			
 			
 		
 			
-			Document listeDoc = new Document(ff, v);
+			Document listeDoc = new Document(v);
 
 			listeDoc.setIdJustificatif(idJustificatif);
 			listeDoc.setPath(path);
 			listeDoc.setIdVisiteur(v);
-			listeDoc.setIdFraisForfait(ff);
-			listeDoc.setNomJustificatif(NomJustificatif);
-			listeDoc.setMontantJustificatif(MontantJustificatif);
+			
+	
 			
 			DocumentList.add(listeDoc);
 			System.out.println(listeDoc);
@@ -73,9 +68,7 @@ public ObservableList<Document> findPath() throws SQLException {
 		int idJustificatif; 
 		String idVisiteur;
 		String path;
-		String idFraisForfait;
-		String NomJustificatif;
-		float MontantJustificatif;
+	
 		
 		
 		ResultSet table = pst.executeQuery();
@@ -84,26 +77,20 @@ public ObservableList<Document> findPath() throws SQLException {
 			idJustificatif = table.getInt("idJustificatif");
 			idVisiteur= table.getString("idVisiteur");
 			path = table.getString("path");
-			idFraisForfait= table.getString("idFraisForfait");
-			NomJustificatif = table.getString("NomJustificatife");
-			MontantJustificatif = table.getFloat("MontantJustificatif");
+			
 			
 			VisiteurDAO vd = new VisiteurDAO() ;
 			Visiteur v = vd.findById(idVisiteur);
-			FraisForfaitDAO ffd = new FraisForfaitDAO();
-			FraisForfait ff = ffd.findById(idFraisForfait);
 			
 			
 		
 			
-			Document listeDoc = new Document(ff, v);
+			Document listeDoc = new Document(v);
 
 			listeDoc.setIdJustificatif(idJustificatif);
 			listeDoc.setPath(path);
 			listeDoc.setIdVisiteur(v);
-			listeDoc.setIdFraisForfait(ff);
-			listeDoc.setNomJustificatif(NomJustificatif);
-			listeDoc.setMontantJustificatif(MontantJustificatif);
+		
 			
 			DocumentList.add(listeDoc);
 			System.out.println(listeDoc);
