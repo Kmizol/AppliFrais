@@ -4,14 +4,8 @@ package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Date;
-
-import ClassAppliFrais.Etat;
 import ClassAppliFrais.FicheFrais;
-import ClassAppliFrais.Visiteur;
 import DAO.FicheFraisDAO;
-import DAO.VisiteurDAO;
-
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,12 +16,10 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import javafx.util.StringConverter;
 import view.Connexion;
 
 
@@ -86,7 +78,7 @@ public class ControllerTableauDesVisiteur {
     String mois = txtMois.getText();
     
 	try {
-		empData = (new FicheFraisDAO()).findByMois(mois);
+		empData = FicheFraisDAO.findByMois(mois);
 		 tbVisiteur.setItems(empData);	
 		} 
 	
@@ -126,7 +118,7 @@ public class ControllerTableauDesVisiteur {
     private void initialize ()  {
     	
     	try {
-			empData = (new FicheFraisDAO()).findall();
+			empData = FicheFraisDAO.findall();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

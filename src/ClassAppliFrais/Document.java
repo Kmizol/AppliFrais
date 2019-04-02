@@ -1,19 +1,11 @@
 package ClassAppliFrais;
 
-import java.time.LocalDate;
-
-import javafx.beans.InvalidationListener;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.util.StringConverter;
 
 
 
@@ -26,7 +18,7 @@ public class Document {
 	private StringProperty NomJustificatif;
 	private FloatProperty MontantJustificatif;
 
-	public Document(FraisForfait idFraisForfait,Visiteur idVisiteur) {
+	public Document(Visiteur idVisiteur, FraisForfait idFraisForfait) {
 		
 		this.idJustificatif = new SimpleIntegerProperty();
 		this.idFraisForfait = idFraisForfait ;

@@ -1,7 +1,6 @@
 package controller;
 
 import ClassAppliFrais.Document;
-import ClassAppliFrais.FicheFrais;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 

@@ -2,13 +2,10 @@ package controller;
 
 import java.io.IOException;
 
-import java.sql.Date;
 import java.sql.SQLException;
 
 import ClassAppliFrais.Document;
 import ClassAppliFrais.FicheFrais;
-import ClassAppliFrais.FraisForfait;
-import ClassAppliFrais.Visiteur;
 import ClassAppliFrais.Lignefraisforfait;
 import DAO.DocumentDAO;
 import DAO.FicheFraisDAO;
@@ -39,8 +36,6 @@ public class FicheFraisVisiteurController {
 	private Button Valider; 
 	@FXML 
 	private AnchorPane  mainPane ;
-    ObservableList<Lignefraisforfait> empData ;
-     private FicheFrais fiche ;
     @FXML
     private TableView <Lignefraisforfait> TBFicheFrais ;
     @FXML
@@ -72,10 +67,11 @@ public class FicheFraisVisiteurController {
     private Label nomV ;
     @FXML
     private Label prenomV ;
+    ObservableList<Lignefraisforfait> empData ;
+    private FicheFrais fiche ;
     
 	public void ValiderFF(ActionEvent evt) throws SQLException, IOException {
-		System.out.println(fiche);
-		FicheFraisDAO.updateFiche(fiche.getIdVisiteur().getId(),fiche.getMois());
+					FicheFraisDAO.updateFiche(fiche.getIdVisiteur().getId(),fiche.getMois());
 
 		
 	    /*        FXMLLoader loader = new FXMLLoader();
@@ -89,22 +85,27 @@ public class FicheFraisVisiteurController {
 		 idV.setText(fiche.getIdVisiteur().getId());
 			 nomV.setText(fiche.getIdVisiteur().getNom());
 			  prenomV.setText(fiche.getIdVisiteur().getPrenom());
-		
-	}
-	 @FXML
-	private void initialize ()  {
-	    	
-	    	try {
-					empData = (new LigneFraisForfaitDAO()).findall();	
+			  try {
+	    		     System.out.println(fiche.getIdVisiteur().getId());
+					empData = (new LigneFraisForfaitDAO()).findById(fiche.getIdVisiteur().getId());	
+					 System.out.println(empData.get(0));
 					
 					 
 	    	}
 			 catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-		 }		
+		 }
+				 TBFicheFrais.setItems(empData);
+		
+	}
+	 @FXML
+	private void initialize ()  {
+		 
 	    	
-	    	 TBFicheFrais.setItems(empData);
+	    	
+	    	
+	    
 	    
 			
 	    	IdVisiteur.setCellValueFactory(cellData -> cellData.getValue().getIdVisiteur().getIdPro());

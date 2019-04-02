@@ -1,12 +1,10 @@
 package ClassAppliFrais;
-import java.time.LocalDate;
 import java.sql.Date;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.util.StringConverter;
 
 
 
