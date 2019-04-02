@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import ClassAppliFrais.Etat;
-import ClassAppliFrais.Visiteur;
-import javafx.beans.property.StringProperty;
 import javafx.collections.ObservableList;
 
 public class EtatDAO implements DAO<Etat> {

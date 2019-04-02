@@ -20,7 +20,14 @@
             <Image url="@../../bin/view/TropStyler.gif" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="250.0" layoutY="96.0" opacity="0.75" prefHeight="340.0" prefWidth="367.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 40;" />
+      <AnchorPane layoutX="250.0" layoutY="96.0" opacity="0.75" prefHeight="340.0" prefWidth="367.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 40;">
+         <children>
+            <TextField fx:id="info" layoutX="36.0" layoutY="259.0" prefHeight="26.0" prefWidth="203.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
       <Label layoutX="308.0" layoutY="111.0" prefHeight="68.0" prefWidth="152.0" text="Connexion">
          <font>
             <Font name="Arial Rounded MT Bold" size="27.0" />
@@ -28,7 +35,10 @@
       </Label>
       <Label layoutX="330.0" layoutY="223.0" text="Login" />
       <Label layoutX="294.0" layoutY="273.0" text="Mot de passe" />
-      <Button fx:id="btConnexion" layoutX="499.0" layoutY="351.0" mnemonicParsing="false" onAction="#actionConnexion" style="-fx-background-color: #2dabf9; -fx-background-radius: 20;" text="Connexion" />
+      <Button fx:id="btConnexion" layoutX="499.0" layoutY="351.0" mnemonicParsing="false" onAction="#actionConnexion" style="-fx-background-color: #2dabf9; -fx-background-radius: 20;" text="Connexion">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <TextField fx:id="txtLogin" layoutX="402.0" layoutY="219.0" style="-fx-background-color: white; -fx-background-radius: 20;">
          <cursor>
             <Cursor fx:constant="TEXT" />
@@ -46,10 +56,6 @@
          <effect>
             <InnerShadow color="DEEPSKYBLUE" />
          </effect></TextField>
-      <TextField fx:id="info" layoutX="283.0" layoutY="351.0" opacity="0.0" prefHeight="26.0" prefWidth="203.0" style="-fx-background-color: #00BFFF;">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font></TextField>
    </children>
    <cursor>
       <Cursor fx:constant="TEXT" />

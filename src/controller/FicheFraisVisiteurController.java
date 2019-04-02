@@ -2,13 +2,10 @@ package controller;
 
 import java.io.IOException;
 
-import java.sql.Date;
 import java.sql.SQLException;
 
 import ClassAppliFrais.Document;
 import ClassAppliFrais.FicheFrais;
-import ClassAppliFrais.FraisForfait;
-import ClassAppliFrais.Visiteur;
 import ClassAppliFrais.Lignefraisforfait;
 import DAO.DocumentDAO;
 import DAO.FicheFraisDAO;

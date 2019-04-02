@@ -1,19 +1,14 @@
 package DAO;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import DAO.VisiteurDAO;
 
-import DAO.VisiteurDAO;
 import ClassAppliFrais.Visiteur;
-import ClassAppliFrais.Etat;
-import ClassAppliFrais.FicheFrais;
 import ClassAppliFrais.FraisForfait;
-import ClassAppliFrais.LigneFraisHorsForfait;
 import ClassAppliFrais.Lignefraisforfait;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

@@ -43,7 +43,7 @@ public class DocumentDAO {
 			
 		
 			
-			Document listeDoc = new Document(v);
+			Document listeDoc = new Document(v, null);
 
 			listeDoc.setIdJustificatif(idJustificatif);
 			listeDoc.setPath(path);
@@ -85,7 +85,7 @@ public ObservableList<Document> findPath() throws SQLException {
 			
 		
 			
-			Document listeDoc = new Document(v);
+			Document listeDoc = new Document(v, null);
 
 			listeDoc.setIdJustificatif(idJustificatif);
 			listeDoc.setPath(path);
